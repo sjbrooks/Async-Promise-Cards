@@ -12,7 +12,6 @@ async function getNewDeck() {
     console.log("deckID is   ", deckID);
 }
 
-
 async function drawCard() {
     let drawURL = `https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=1`;
     let drawnCardObj = await $.getJSON(drawURL);
@@ -20,8 +19,8 @@ async function drawCard() {
     let drawnCard = drawnCardObj.cards[0];
     console.log(`${drawnCard.value} of ${drawnCard.suit} from deck${deckID}`);
     let cardPNG = drawnCard.image;
-    let randDeg = Math.random()*360
-    $('.dealer-table').append(`<div class="card" style="rotate:${randDeg}deg"><img width="100%" height="auto" src="${cardPNG}"></div>`);
+    let randDeg = Math.floor(Math.random()*361)
+    $('.dealer-table').append(`<div class="card" style=" transform: rotate(${randDeg}deg)"><img width="100%" height="auto" src="${cardPNG}"></div>`);
 };
 
 $(function () {

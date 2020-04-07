@@ -1,17 +1,27 @@
 /* $randomNumber = random(360); */
 
+body, .card {
+  background-color: darkgreen;
+}
+
 .dealer-table{
-    background-color: darkgreen;
     position: relative;
-    height: 400px;
-    width: 400px;
+    position: relative;
+    top: 2rem;
+    left: 35%;
 }
 
 .card{
-    width: 50%;
-    height: 50vh;
+    width: 10rem;
+    height: 14rem;
     position: absolute;
-    top: 10%;
-    left: 10%;
-    /* transform: rotate( $randomNumber + deg ); */
+    top: 10rem;
+    left: 10rem;
+}
+
+#buttons {
+  width: 20rem;
+  position: relative;
+  top: 3rem;
+  left: 40%;
 }
