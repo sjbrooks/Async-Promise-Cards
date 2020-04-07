@@ -20,7 +20,8 @@ async function drawCard() {
     let drawnCard = drawnCardObj.cards[0];
     console.log(`${drawnCard.value} of ${drawnCard.suit} from deck${deckID}`);
     let cardPNG = drawnCard.image;
-    $('.card').append(`<img width="30%" height="auto" src="${cardPNG}">`);
+    let randDeg = Math.random()*360
+    $('.dealer-table').append(`<div class="card" style="rotate:${randDeg}deg"><img width="100%" height="auto" src="${cardPNG}"></div>`);
 };
 
 $(function () {
